@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProcedureModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Procedure">
+    <Key>
+      <PropertyRef Name="subject" />
+    </Key>
+    <Property Name="subject" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="startTime" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="examDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="duration" Type="Int32" Nullable="false" />
+    <Property Name="classRoom" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="faculty" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ProcedureContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Procedures" EntityType="Self.Procedure" />
+  </EntityContainer>
+</Schema>

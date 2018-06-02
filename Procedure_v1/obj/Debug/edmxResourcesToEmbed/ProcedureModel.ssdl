@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProcedureModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Procedure">
+    <Key>
+      <PropertyRef Name="subject" />
+    </Key>
+    <Property Name="subject" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="startTime" Type="time" Precision="7" Nullable="false" />
+    <Property Name="examDate" Type="datetime" Nullable="false" />
+    <Property Name="duration" Type="int" Nullable="false" />
+    <Property Name="classRoom" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="faculty" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="status" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ProcedureModelStoreContainer">
+    <EntitySet Name="Procedure" EntityType="Self.Procedure" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
